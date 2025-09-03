@@ -13,7 +13,29 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'crimson': ['Crimson Pro', 'serif'],
+        'helvetica': ['Helvetica Neue', '-apple-system', 'system-ui', 'sans-serif'],
+        'roboto': ['Roboto', '-apple-system', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        // Design specific colors
+        mindfolk: {
+          primary: '#497557',     // Primary green
+          secondary: '#EF6C00',   // Secondary orange
+          dark: '#043121',        // Dark green
+          purple: '#90549B',      // Alternative purple
+          orange: '#FFAD67',      // Alternative orange
+          teal: '#00796B',        // Teal
+          'green-light': '#C8E6C9', // Light green
+          yellow: '#FFFDE7',      // Yellow
+          'orange-light': '#F4BB92', // Light orange
+          'bg-gray': '#F3F3F3',   // Background gray
+          'card-bg': '#FAFAFA',   // Card background
+          'section-bg': '#F5F5F5', // Section background
+          'light-cream': '#FFF8F2', // Light cream from buttons
+        },
+        // Shadcn colors (keeping existing ones)
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
