@@ -115,7 +115,7 @@ export default function Index() {
             {navigationItems.map((item, index) => (
               <div key={index} className={`flex items-center p-3 mb-2 transition-colors ${
                 item.active
-                  ? 'bg-mindfolk-secondary border-l-8 border-mindfolk-primary text-mindfolk-primary font-bold'
+                  ? 'bg-mindfolk-light-cream border-l-8 border-mindfolk-primary text-mindfolk-primary font-bold'
                   : 'text-gray-500 hover:bg-gray-50'
               }`}>
                 <item.icon className={`w-6 h-6 flex-shrink-0 ${item.active ? 'text-mindfolk-primary' : 'text-gray-500'}`} />
@@ -312,7 +312,7 @@ export default function Index() {
             </Card>
 
             {/* Quick Actions */}
-            <Card className="shadow-md bg-mindfolk-secondary">
+            <Card className="shadow-md bg-mindfolk-light-cream">
               <CardContent className="p-6">
                 <div className="space-y-4">
                   {quickActions.map((action, index) => (
