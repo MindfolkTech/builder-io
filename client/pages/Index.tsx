@@ -113,14 +113,14 @@ export default function Index() {
           {/* Navigation */}
           <nav className="p-4">
             {navigationItems.map((item, index) => (
-              <div key={index} className={`flex items-center p-3 rounded-md mb-2 transition-colors ${
-                item.active 
-                  ? 'bg-mindfolk-secondary border-l-4 border-mindfolk-primary text-mindfolk-primary' 
-                  : 'text-gray-600 hover:bg-gray-50'
+              <div key={index} className={`flex items-center p-3 mb-2 transition-colors ${
+                item.active
+                  ? 'bg-mindfolk-secondary border-l-8 border-mindfolk-primary text-mindfolk-primary font-bold'
+                  : 'text-gray-500 hover:bg-gray-50'
               }`}>
-                <item.icon className="w-6 h-6 flex-shrink-0" />
+                <item.icon className={`w-6 h-6 flex-shrink-0 ${item.active ? 'text-mindfolk-primary' : 'text-gray-500'}`} />
                 {!sidebarCollapsed && (
-                  <span className="ml-3 font-helvetica font-medium">{item.label}</span>
+                  <span className="ml-3 font-helvetica">{item.label}</span>
                 )}
               </div>
             ))}
@@ -136,7 +136,7 @@ export default function Index() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-4 sm:p-6 lg:p-8">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 bg-mindfolk-bg-gray">
           {/* Mobile Search Bar */}
           <div className="sm:hidden mb-4">
             <div className="relative">
