@@ -159,15 +159,17 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
             {/* Upcoming Appointments */}
             <Card className="shadow-md">
-              <CardHeader className="flex flex-row items-center justify-between">
+              <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-xl font-crimson font-medium">Upcoming Appointments</h2>
+                  <h2 className="text-lg sm:text-xl font-crimson font-medium">Upcoming Appointments</h2>
                   <Button variant="link" size="sm" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
                     EDIT
                   </Button>
                 </div>
                 <Button variant="link" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
-                  Open Calendar <ExternalLink className="w-4 h-4 ml-1" />
+                  <span className="hidden sm:inline">Open Calendar</span>
+                  <span className="sm:hidden">Calendar</span>
+                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                 </Button>
               </CardHeader>
               <CardContent className="p-0">
@@ -199,15 +201,17 @@ export default function Index() {
 
             {/* My Client Dashboard */}
             <Card className="shadow-md">
-              <CardHeader className="flex flex-row items-center justify-between">
+              <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-xl font-crimson font-medium">My Client Dashboard</h2>
+                  <h2 className="text-lg sm:text-xl font-crimson font-medium">My Client Dashboard</h2>
                   <Button variant="link" size="sm" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
                     EDIT
                   </Button>
                 </div>
                 <Button variant="link" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
-                  Open clients <ExternalLink className="w-4 h-4 ml-1" />
+                  <span className="hidden sm:inline">Open clients</span>
+                  <span className="sm:hidden">Clients</span>
+                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                 </Button>
               </CardHeader>
               <CardContent className="p-0">
