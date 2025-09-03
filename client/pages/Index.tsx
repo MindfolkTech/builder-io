@@ -159,7 +159,7 @@ export default function Index() {
           {/* Dashboard Grid */}
           <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Upcoming Appointments */}
-            <Card className="shadow-md">
+            <Card className="shadow-md h-full flex flex-col">
               <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
                 <div className="flex items-center gap-2">
                   <h2 className="text-lg sm:text-xl font-crimson font-medium">Upcoming Appointments</h2>
