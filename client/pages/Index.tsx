@@ -252,7 +252,7 @@ export default function Index() {
           </div>
 
           {/* Bottom Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Income Details */}
             <Card className="shadow-md">
               <CardHeader className="flex flex-row items-center justify-between">
