@@ -144,7 +144,7 @@ export default function Index() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 h-[calc(100vh-64px)] overflow-hidden p-4 sm:p-6 lg:p-6 bg-mindfolk-bg-gray">
+        <main className="flex-1 h-[calc(100vh-64px)] overflow-hidden p-4 sm:p-6 lg:p-6 pb-3 bg-mindfolk-bg-gray">
           {/* Mobile Search Bar */}
           <div className="sm:hidden mb-4">
             <div className="relative">
