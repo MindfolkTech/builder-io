@@ -133,6 +133,16 @@ export default function Index() {
               </div>
             )}
           </nav>
+          {!sidebarCollapsed && (
+            <div className="mt-auto p-4 border-t space-y-2">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Quick Actions</div>
+              {quickActions.map((action, index) => (
+                <Button key={index} variant="link" className="p-0 h-auto text-mindfolk-primary underline text-sm font-helvetica block text-left">
+                  {action}
+                </Button>
+              ))}
+            </div>
+          )}
         </aside>
 
         {/* Main Content */}
