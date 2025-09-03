@@ -136,16 +136,27 @@ export default function Index() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-8">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8">
+          {/* Mobile Search Bar */}
+          <div className="sm:hidden mb-4">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Input
+                placeholder="Search Clients"
+                className="pl-10 bg-white border-gray-300 w-full"
+              />
+            </div>
+          </div>
+
           {/* Welcome Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-crimson font-semibold text-mindfolk-dark">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-crimson font-semibold text-mindfolk-dark">
               Welcome Back, Sarah!
             </h1>
           </div>
 
           {/* Dashboard Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
             {/* Upcoming Appointments */}
             <Card className="shadow-md">
               <CardHeader className="flex flex-row items-center justify-between">
