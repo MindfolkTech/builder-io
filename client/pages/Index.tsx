@@ -173,7 +173,7 @@ export default function Index() {
                   <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                 </Button>
               </CardHeader>
-              <CardContent className="p-0">
+              <CardContent className="p-0 flex-1 overflow-auto">
                 {appointments.map((appointment, index) => (
                   <div
                     key={appointment.id}
@@ -215,7 +215,7 @@ export default function Index() {
                   <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                 </Button>
               </CardHeader>
-              <CardContent className="p-0">
+              <CardContent className="p-0 flex-1 overflow-auto">
                 <div className="bg-mindfolk-card-bg">
                   {clients.map((client, index) => (
                     <div
