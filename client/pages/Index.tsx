@@ -165,7 +165,7 @@ export default function Index() {
 
           <div className="flex flex-col h-full min-h-0 gap-6">
           {/* Dashboard Grid */}
-          <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
             {/* Upcoming Appointments */}
             <Card className="shadow-md h-full flex flex-col">
               <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
