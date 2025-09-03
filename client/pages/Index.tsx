@@ -89,7 +89,7 @@ export default function Index() {
 
       <div className="flex">
         {/* Sidebar */}
-        <aside className={`bg-white shadow-lg transition-all duration-300 min-h-[calc(100vh-64px)] ${
+        <aside className={`bg-white shadow-lg transition-all duration-300 min-h-[calc(100vh-64px)] flex flex-col ${
           sidebarCollapsed
             ? 'md:w-16 w-0 overflow-hidden md:overflow-visible'
             : 'w-64'
