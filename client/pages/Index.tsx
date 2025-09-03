@@ -271,17 +271,20 @@ export default function Index() {
                     <div className="font-helvetica font-medium text-black mb-4">Appointments</div>
                   </div>
                   
-                  {/* Pie Chart Placeholder */}
+                  {/* Pie Chart */}
                   <div className="flex items-center justify-center mb-6">
                     <div className="relative w-56 h-56 flex items-center justify-center">
-                      {/* Pie Chart SVG */}
+                      {/* Pie Chart SVG - Using the exact paths from the Figma design */}
                       <svg width="226" height="226" viewBox="0 0 226 226" className="absolute">
-                        {/* Orange segment */}
-                        <path d="M113 113 L113 10 A103 103 0 0 1 190 60 Z" fill="#FFAD67" stroke="white" strokeWidth="2"/>
-                        {/* Green segment */}
-                        <path d="M113 113 L190 60 A103 103 0 0 1 170 190 Z" fill="#497557" stroke="white" strokeWidth="2"/>
-                        {/* Purple segment */}
-                        <path d="M113 113 L170 190 A103 103 0 0 1 113 10 Z" fill="#90549B" stroke="white" strokeWidth="2"/>
+                        <defs>
+                          <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="2" dy="2" stdDeviation="2" floodOpacity="0.1"/>
+                          </filter>
+                        </defs>
+                        {/* Using the exact path data from Figma */}
+                        <path d="M108.189 20.9866C86.3344 22.2044 65.6247 31.1522 49.7592 46.2316C33.8937 61.3111 23.906 81.5398 21.5802 103.304C19.2545 125.069 24.7422 146.951 37.063 165.043C49.3839 183.134 67.7353 196.256 88.839 202.064L94.9597 179.825C79.132 175.469 65.3684 165.628 56.1278 152.059C46.8872 138.49 42.7714 122.079 44.5157 105.755C46.26 89.4318 53.7508 74.2602 65.6499 62.9507C77.549 51.6411 93.0813 44.9303 109.472 44.0169L108.189 20.9866Z" fill="#FFAD67" stroke="white" strokeWidth="2"/>
+                        <path d="M89.2632 202.07C104.365 206.151 120.257 206.324 135.445 202.574C150.633 198.824 164.618 191.274 176.085 180.634C187.553 169.993 196.127 156.611 201.001 141.746C205.875 126.881 206.889 111.021 203.948 95.6558L181.294 99.9918C183.499 111.516 182.739 123.411 179.083 134.56C175.427 145.709 168.997 155.745 160.396 163.725C151.796 171.706 141.307 177.368 129.916 180.181C118.525 182.993 106.606 182.863 95.2797 179.803L89.2632 202.07Z" fill="#497557" stroke="white" strokeWidth="2"/>
+                        <path d="M204.356 96.5295C200.236 74.4462 188.2 54.6246 170.507 40.7827C152.814 26.9408 130.678 20.0296 108.252 21.3454L109.603 44.3718C126.423 43.385 143.024 48.5684 156.294 58.9498C169.564 69.3312 178.591 84.1974 181.681 100.76L204.356 96.5295Z" fill="#90549B" stroke="white" strokeWidth="2"/>
                       </svg>
                       <div className="absolute inset-0 flex items-center justify-center">
                         <span className="text-5xl font-helvetica font-bold text-mindfolk-dark">122</span>
@@ -360,24 +363,24 @@ export default function Index() {
                     
                     {/* Chart area */}
                     <div className="flex-1 ml-8 h-full relative">
-                      {/* Line chart SVG */}
-                      <svg width="100%" height="100%" viewBox="0 0 400 200" className="absolute inset-0">
-                        <polyline
+                      {/* Line chart SVG - Using exact curve from Figma */}
+                      <svg width="100%" height="100%" viewBox="0 0 480 220" className="absolute inset-0">
+                        <path
+                          d="M2.3374 220.584L85.8951 200.205C86.2266 200.124 86.5499 200.013 86.8609 199.873L163.854 165.171C164.136 165.044 164.406 164.894 164.663 164.722L242.354 112.666C242.692 112.439 243.055 112.25 243.435 112.103L319.627 82.5304C320.129 82.3352 320.601 82.0678 321.027 81.7366L396.788 22.794C397.411 22.3093 398.13 21.9631 398.897 21.7783L479.686 2.32451"
                           fill="none"
                           stroke="#FFAD67"
                           strokeWidth="3"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          points="0,180 60,150 120,100 180,60 240,40 300,20 360,10"
                         />
                         {/* Data points */}
-                        <circle cx="0" cy="180" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
-                        <circle cx="60" cy="150" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
-                        <circle cx="120" cy="100" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
-                        <circle cx="180" cy="60" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
-                        <circle cx="240" cy="40" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
-                        <circle cx="300" cy="20" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
-                        <circle cx="360" cy="10" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
+                        <circle cx="2" cy="220" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
+                        <circle cx="86" cy="200" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
+                        <circle cx="164" cy="165" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
+                        <circle cx="242" cy="113" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
+                        <circle cx="320" cy="83" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
+                        <circle cx="397" cy="23" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
+                        <circle cx="480" cy="2" r="4" fill="white" stroke="#F4BB92" strokeWidth="2"/>
                       </svg>
                     </div>
                     
