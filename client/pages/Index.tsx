@@ -55,33 +55,47 @@ export default function Index() {
     <div className="min-h-screen bg-mindfolk-bg-gray">
       {/* Header */}
       <header className="h-16 bg-[#305C45] flex items-center px-4 relative z-10">
+        {/* Mobile Menu Button */}
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+          className="md:hidden text-white mr-2"
+        >
+          {sidebarCollapsed ? <ChevronRight className="w-5 h-5" /> : <ChevronLeft className="w-5 h-5" />}
+        </Button>
+
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
-          <div className="text-white font-bold text-xl font-crimson">Mindfolk</div>
+          <div className="text-white font-bold text-lg sm:text-xl font-crimson">Mindfolk</div>
         </div>
-        
-        {/* Search Bar */}
-        <div className="flex-1 max-w-md mx-8">
-          <div className="relative">
+
+        {/* Search Bar - Hidden on mobile */}
+        <div className="hidden sm:flex flex-1 max-w-md mx-4 lg:mx-8">
+          <div className="relative w-full">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <Input 
-              placeholder="Search Clients" 
-              className="pl-10 bg-white border-gray-300"
+            <Input
+              placeholder="Search Clients"
+              className="pl-10 bg-white border-gray-300 w-full"
             />
           </div>
         </div>
 
         {/* User Avatar */}
-        <Avatar className="w-10 h-10">
-          <AvatarFallback className="bg-mindfolk-yellow text-black font-helvetica">CT</AvatarFallback>
+        <Avatar className="w-8 h-8 sm:w-10 sm:h-10 ml-auto">
+          <AvatarFallback className="bg-mindfolk-yellow text-black font-helvetica text-sm">CT</AvatarFallback>
         </Avatar>
       </header>
 
       <div className="flex">
         {/* Sidebar */}
-        <aside className={`bg-white shadow-lg transition-all duration-300 ${sidebarCollapsed ? 'w-16' : 'w-64'} min-h-[calc(100vh-64px)]`}>
-          {/* Collapse Button */}
-          <div className="p-4 border-b">
+        <aside className={`bg-white shadow-lg transition-all duration-300 min-h-[calc(100vh-64px)] ${
+          sidebarCollapsed
+            ? 'md:w-16 w-0 overflow-hidden md:overflow-visible'
+            : 'w-64'
+        } ${sidebarCollapsed ? 'md:block hidden' : 'block'} md:relative absolute z-20 md:z-auto`}>
+          {/* Collapse Button - Desktop only */}
+          <div className="hidden md:block p-4 border-b">
             <Button
               variant="ghost"
               size="sm"
