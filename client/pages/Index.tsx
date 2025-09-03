@@ -253,85 +253,88 @@ export default function Index() {
 
           {/* Bottom Row */}
           <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Income Details */}
-            <Card className="shadow-md">
-              <CardHeader className="flex flex-row items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <h2 className="text-xl font-crimson font-medium">Income Details</h2>
-                  <Button variant="link" size="sm" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
-                    EDIT
-                  </Button>
-                </div>
-                <Button variant="link" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
-                  Open Analytics <ExternalLink className="w-4 h-4 ml-1" />
-                </Button>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-mindfolk-card-bg p-6 rounded">
-                  <div className="mb-6">
-                    <div className="font-helvetica font-medium text-black mb-4">Appointments</div>
+            {/* Left: Income + Quick Actions */}
+            <div className="grid grid-cols-1 xl:grid-cols-[1fr_216px] gap-6 h-full min-h-0">
+              {/* Income Details */}
+              <Card className="shadow-md h-full flex flex-col">
+                <CardHeader className="flex flex-row items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <h2 className="text-xl font-crimson font-medium">Income Details</h2>
+                    <Button variant="link" size="sm" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
+                      EDIT
+                    </Button>
                   </div>
-                  
-                  {/* Pie Chart */}
-                  <div className="flex items-center justify-center mb-6">
-                    <div className="relative w-56 h-56 flex items-center justify-center">
-                      {/* Pie Chart SVG - Using the exact paths from the Figma design */}
-                      <svg width="226" height="226" viewBox="0 0 226 226" className="absolute">
-                        <defs>
-                          <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                            <feDropShadow dx="2" dy="2" stdDeviation="2" floodOpacity="0.1"/>
-                          </filter>
-                        </defs>
-                        {/* Using the exact path data from Figma */}
-                        <path d="M108.189 20.9866C86.3344 22.2044 65.6247 31.1522 49.7592 46.2316C33.8937 61.3111 23.906 81.5398 21.5802 103.304C19.2545 125.069 24.7422 146.951 37.063 165.043C49.3839 183.134 67.7353 196.256 88.839 202.064L94.9597 179.825C79.132 175.469 65.3684 165.628 56.1278 152.059C46.8872 138.49 42.7714 122.079 44.5157 105.755C46.26 89.4318 53.7508 74.2602 65.6499 62.9507C77.549 51.6411 93.0813 44.9303 109.472 44.0169L108.189 20.9866Z" fill="#FFAD67" stroke="white" strokeWidth="2"/>
-                        <path d="M89.2632 202.07C104.365 206.151 120.257 206.324 135.445 202.574C150.633 198.824 164.618 191.274 176.085 180.634C187.553 169.993 196.127 156.611 201.001 141.746C205.875 126.881 206.889 111.021 203.948 95.6558L181.294 99.9918C183.499 111.516 182.739 123.411 179.083 134.56C175.427 145.709 168.997 155.745 160.396 163.725C151.796 171.706 141.307 177.368 129.916 180.181C118.525 182.993 106.606 182.863 95.2797 179.803L89.2632 202.07Z" fill="#497557" stroke="white" strokeWidth="2"/>
-                        <path d="M204.356 96.5295C200.236 74.4462 188.2 54.6246 170.507 40.7827C152.814 26.9408 130.678 20.0296 108.252 21.3454L109.603 44.3718C126.423 43.385 143.024 48.5684 156.294 58.9498C169.564 69.3312 178.591 84.1974 181.681 100.76L204.356 96.5295Z" fill="#90549B" stroke="white" strokeWidth="2"/>
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-5xl font-helvetica font-bold text-mindfolk-dark">122</span>
+                  <Button variant="link" className="text-mindfolk-primary underline text-xs uppercase font-helvetica">
+                    Open Analytics <ExternalLink className="w-4 h-4 ml-1" />
+                  </Button>
+                </CardHeader>
+                <CardContent className="flex-1 overflow-auto">
+                  <div className="bg-mindfolk-card-bg p-6 rounded">
+                    <div className="mb-6">
+                      <div className="font-helvetica font-medium text-black mb-4">Appointments</div>
+                    </div>
+
+                    {/* Pie Chart */}
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="relative w-56 h-56 flex items-center justify-center">
+                        {/* Pie Chart SVG - Using the exact paths from the Figma design */}
+                        <svg width="226" height="226" viewBox="0 0 226 226" className="absolute">
+                          <defs>
+                            <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                              <feDropShadow dx="2" dy="2" stdDeviation="2" floodOpacity="0.1"/>
+                            </filter>
+                          </defs>
+                          {/* Using the exact path data from Figma */}
+                          <path d="M108.189 20.9866C86.3344 22.2044 65.6247 31.1522 49.7592 46.2316C33.8937 61.3111 23.906 81.5398 21.5802 103.304C19.2545 125.069 24.7422 146.951 37.063 165.043C49.3839 183.134 67.7353 196.256 88.839 202.064L94.9597 179.825C79.132 175.469 65.3684 165.628 56.1278 152.059C46.8872 138.49 42.7714 122.079 44.5157 105.755C46.26 89.4318 53.7508 74.2602 65.6499 62.9507C77.549 51.6411 93.0813 44.9303 109.472 44.0169L108.189 20.9866Z" fill="#FFAD67" stroke="white" strokeWidth="2"/>
+                          <path d="M89.2632 202.07C104.365 206.151 120.257 206.324 135.445 202.574C150.633 198.824 164.618 191.274 176.085 180.634C187.553 169.993 196.127 156.611 201.001 141.746C205.875 126.881 206.889 111.021 203.948 95.6558L181.294 99.9918C183.499 111.516 182.739 123.411 179.083 134.56C175.427 145.709 168.997 155.745 160.396 163.725C151.796 171.706 141.307 177.368 129.916 180.181C118.525 182.993 106.606 182.863 95.2797 179.803L89.2632 202.07Z" fill="#497557" stroke="white" strokeWidth="2"/>
+                          <path d="M204.356 96.5295C200.236 74.4462 188.2 54.6246 170.507 40.7827C152.814 26.9408 130.678 20.0296 108.252 21.3454L109.603 44.3718C126.423 43.385 143.024 48.5684 156.294 58.9498C169.564 69.3312 178.591 84.1974 181.681 100.76L204.356 96.5295Z" fill="#90549B" stroke="white" strokeWidth="2"/>
+                        </svg>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-5xl font-helvetica font-bold text-mindfolk-dark">122</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Legend */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-4 h-4 bg-mindfolk-orange"></div>
+                        <span className="text-sm text-black/35 font-helvetica">100 happened</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-4 h-4 bg-mindfolk-primary"></div>
+                        <span className="text-sm text-black/35 font-helvetica">40 cancelled</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-4 h-4 bg-mindfolk-purple"></div>
+                        <span className="text-sm text-black/35 font-helvetica">38 rescheduled</span>
                       </div>
                     </div>
                   </div>
+                </CardContent>
+              </Card>
 
-                  {/* Legend */}
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-4 h-4 bg-mindfolk-orange"></div>
-                      <span className="text-sm text-black/35 font-helvetica">100 happened</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-4 h-4 bg-mindfolk-primary"></div>
-                      <span className="text-sm text-black/35 font-helvetica">40 cancelled</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-4 h-4 bg-mindfolk-purple"></div>
-                      <span className="text-sm text-black/35 font-helvetica">38 rescheduled</span>
-                    </div>
+              {/* Quick Actions */}
+              <Card className="shadow-md bg-mindfolk-light-cream h-full">
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    {quickActions.map((action, index) => (
+                      <div key={index}>
+                        <Button
+                          variant="link"
+                          className="text-mindfolk-primary underline text-sm font-helvetica font-medium p-0 h-auto leading-relaxed"
+                        >
+                          {action}
+                        </Button>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Quick Actions */}
-            <Card className="shadow-md bg-mindfolk-light-cream">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  {quickActions.map((action, index) => (
-                    <div key={index}>
-                      <Button 
-                        variant="link" 
-                        className="text-mindfolk-primary underline text-sm font-helvetica font-medium p-0 h-auto leading-relaxed"
-                      >
-                        {action}
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
 
             {/* My Business Profile */}
-            <Card className="shadow-md">
+            <Card className="shadow-md h-full flex flex-col">
               <CardHeader className="flex flex-row items-center justify-between">
                 <div className="flex items-center gap-2">
                   <h2 className="text-xl font-crimson font-medium">My Business Profile</h2>
