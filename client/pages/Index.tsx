@@ -263,8 +263,6 @@ export default function Index() {
 
           {/* Bottom Row */}
           <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Left: Income + Quick Actions */}
-            <div className="grid grid-cols-1 xl:grid-cols-[1fr_216px] gap-6 h-full min-h-0">
               {/* Income Details */}
               <Card className="shadow-md h-full flex flex-col">
                 <CardHeader className="flex flex-row items-center justify-between">
@@ -324,26 +322,7 @@ export default function Index() {
                 </CardContent>
               </Card>
 
-              {/* Quick Actions */}
-              <Card className="shadow-md bg-mindfolk-light-cream h-full">
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    {quickActions.map((action, index) => (
-                      <div key={index}>
-                        <Button
-                          variant="link"
-                          className="text-mindfolk-primary underline text-sm font-helvetica font-medium p-0 h-auto leading-relaxed"
-                        >
-                          {action}
-                        </Button>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* My Business Profile */}
+              {/* My Business Profile */}
             <Card className="shadow-md h-full flex flex-col">
               <CardHeader className="flex flex-row items-center justify-between">
                 <div className="flex items-center gap-2">
