@@ -44,9 +44,7 @@ export default function Index() {
 
   const quickActions = [
     "Update pricing",
-    "Add a new video", 
-    "Gather reviews",
-    "Promote your page",
+    "Add a new video",
     "Learn engagement boost",
     "FAQ"
   ];
