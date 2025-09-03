@@ -172,23 +172,25 @@ export default function Index() {
               </CardHeader>
               <CardContent className="p-0">
                 {appointments.map((appointment, index) => (
-                  <div 
-                    key={appointment.id} 
-                    className={`flex items-center p-6 border-b border-gray-200 ${
+                  <div
+                    key={appointment.id}
+                    className={`flex items-center p-4 sm:p-6 border-b border-gray-200 ${
                       appointment.highlighted ? 'bg-mindfolk-light-cream' : index % 2 === 0 ? 'bg-mindfolk-section-bg' : 'bg-white'
                     }`}
                   >
-                    <Avatar className="w-10 h-10 mr-4">
-                      <AvatarFallback style={{ backgroundColor: appointment.bgColor }} className="text-white font-roboto">
+                    <Avatar className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4">
+                      <AvatarFallback style={{ backgroundColor: appointment.bgColor }} className="text-white font-roboto text-sm">
                         {appointment.initials}
                       </AvatarFallback>
                     </Avatar>
-                    <div className="flex-1">
-                      <div className="font-helvetica font-medium text-black/87">{appointment.name}</div>
-                      <div className="text-sm text-black/60 font-helvetica">{appointment.time}</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-helvetica font-medium text-black/87 text-sm sm:text-base truncate">{appointment.name}</div>
+                      <div className="text-xs sm:text-sm text-black/60 font-helvetica">{appointment.time}</div>
                     </div>
-                    <Button size="sm" className="bg-mindfolk-primary hover:bg-mindfolk-primary/90 text-mindfolk-light-cream rounded-2xl px-4">
-                      Join Now <ChevronRight className="w-4 h-4 ml-1" />
+                    <Button size="sm" className="bg-mindfolk-primary hover:bg-mindfolk-primary/90 text-mindfolk-light-cream rounded-2xl px-3 sm:px-4 text-xs sm:text-sm">
+                      <span className="hidden sm:inline">Join Now</span>
+                      <span className="sm:hidden">Join</span>
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                     </Button>
                   </div>
                 ))}
