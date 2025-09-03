@@ -181,7 +181,8 @@ export default function Index() {
                   <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                 </Button>
               </CardHeader>
-              <CardContent className="p-0 flex-1 overflow-auto">
+              <CardContent className="p-0">
+                <div className="max-h-[232px] xl:max-h-[248px] overflow-auto pr-1">
                 {appointments.map((appointment, index) => (
                   <div
                     key={appointment.id}
@@ -205,6 +206,7 @@ export default function Index() {
                     </Button>
                   </div>
                 ))}
+                </div>
               </CardContent>
             </Card>
 
