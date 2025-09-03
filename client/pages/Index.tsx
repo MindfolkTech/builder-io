@@ -155,6 +155,7 @@ export default function Index() {
             </h1>
           </div>
 
+          <div className="flex flex-col h-full min-h-0 gap-6">
           {/* Dashboard Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
             {/* Upcoming Appointments */}
@@ -399,6 +400,7 @@ export default function Index() {
               </CardContent>
             </Card>
           </div>
+        </div>
         </main>
       </div>
     </div>
