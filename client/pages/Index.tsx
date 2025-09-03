@@ -335,7 +335,7 @@ export default function Index() {
                   Open Profile <ExternalLink className="w-4 h-4 ml-1" />
                 </Button>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-1 overflow-auto">
                 <div className="bg-mindfolk-card-bg p-4 rounded">
                   <div className="mb-4">
                     <div className="font-helvetica font-medium text-black">Profile Views in the last year</div>
