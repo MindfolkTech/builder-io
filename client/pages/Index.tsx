@@ -213,25 +213,25 @@ export default function Index() {
               <CardContent className="p-0">
                 <div className="bg-mindfolk-card-bg">
                   {clients.map((client, index) => (
-                    <div 
-                      key={client.id} 
-                      className={`flex items-center p-6 border-b border-gray-200 ${
+                    <div
+                      key={client.id}
+                      className={`flex items-center p-4 sm:p-6 border-b border-gray-200 ${
                         index % 2 === 0 ? 'bg-mindfolk-section-bg' : 'bg-white'
                       }`}
                     >
-                      <Avatar className="w-10 h-10 mr-4">
-                        <AvatarFallback className="bg-gray-400 text-white font-roboto">
+                      <Avatar className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4">
+                        <AvatarFallback className="bg-gray-400 text-white font-roboto text-sm">
                           {client.name.split(' ').map(n => n[0]).join('')}
                         </AvatarFallback>
                       </Avatar>
-                      <div className="flex-1">
-                        <div className="font-helvetica font-medium text-black/87">{client.name}</div>
-                        <div className="text-sm text-black/50 font-helvetica">{client.email}</div>
+                      <div className="flex-1 min-w-0">
+                        <div className="font-helvetica font-medium text-black/87 text-sm sm:text-base truncate">{client.name}</div>
+                        <div className="text-xs sm:text-sm text-black/50 font-helvetica truncate">{client.email}</div>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <Badge 
+                      <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                        <Badge
                           style={{ backgroundColor: client.statusColor }}
-                          className="text-black rounded-full px-3 py-1"
+                          className="text-black rounded-full px-2 sm:px-3 py-1 text-xs"
                         >
                           {client.status}
                         </Badge>
